@@ -25,9 +25,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     #---------------------------------
-    "core",
-    'user',
-    'post',
+    "apps.core",
+    'apps.user',
+    'apps.post',
     #---------------------------------
     'tinymce',
     "graphene_django",
@@ -81,7 +81,7 @@ CONN_MAX_AGE = 300
 
 # Graphql
 GRAPHENE = {
-    'SCHEMA': 'core.schema.schema'
+    'SCHEMA': 'apps.core.schema.schema'
 }
 
 # Password validation
@@ -110,22 +110,22 @@ PASSWORD_HASHERS = [
 ]
 
 # Logging
-# LOGGING = {
-#     "version": 1,
-#     "handlers": {
-#         "console": {
-#             "class": "logging.StreamHandler",
-#         },
-#     },
-#     "loggers": {
-#         "django.db.backends": {
-#             "level": "DEBUG",
-#         },
-#     },
-#     "root": {
-#         "handlers": ["console"],
-#     },
-# }
+LOGGING = {
+    "version": 1,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "loggers": {
+        "django.db.backends": {
+            "level": "DEBUG",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
